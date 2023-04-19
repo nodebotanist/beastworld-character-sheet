@@ -1,6 +1,6 @@
 import {Component, ReactPropTypes} from "react"
 
-export class StatsBlock extends Component {
+export default class StatsBlock extends Component {
     constructor(props: ReactPropTypes) {
         super(props)
         this.state = {
@@ -9,12 +9,18 @@ export class StatsBlock extends Component {
             con: props.con || 0,
             int: props.int || 0,
             wis: props.wis || 0,
-            cha: props.cha || 0
+            cha: props.cha || 0,
+            str_mod: props.str_mod || 0,
+            dex_mod: props.dex_mod || 0,
+            con_mod: props.con_mod || 0,
+            int_mod: props.int_mod || 0,
+            wis_mod: props.wis_mod || 0,
+            cha_mod: props.cha_mod || 0,
         }
     }
 
     render() {   
-        const { str, dex, con, int, wis, cha } = this.state 
+        const { str, dex, con, int, wis, cha, str_mod, dex_mod, con_mod, int_mod, wis_mod, cha_mod } = this.state 
         return <> 
             <form id="stats">
                 <label htmlFor="str">Strength:</label>
@@ -31,20 +37,25 @@ export class StatsBlock extends Component {
                 <input type="number" id="stats-cha" name="cha" value={cha} min="0" max="50" onChange={this.onStatsChange} />
             </form>
             <div id="modifiers">
-                <span id="modifiers-str">+0</span>
-                <span id="modifiers-dex">+0</span>
-                <span id="modifiers-con">+0</span>
-                <span id="modifiers-int">+0</span>
-                <span id="modifiers-wis">+0</span>
-                <span id="modifiers-cha">+0</span>
+                <span id="modifiers-str">{str_mod}</span>
+                <span id="modifiers-dex">{dex_mod}</span>
+                <span id="modifiers-con">{con_mod}</span>
+                <span id="modifiers-int">{int_mod}</span>
+                <span id="modifiers-wis">{wis_mod}</span>
+                <span id="modifiers-cha">{cha_mod}</span>
             </div>
         </>
     }
 
-    onStatsChange(event) {
+    onStatsChange = (event) => {
         let statToChange = event.target.id.split('-')[1]
-        let modifier = (event.target.value - 10) / 2
-
+        let modifier = Math.floor((event.target.value - 10) / 2).toString()
+        let modifierKey = statToChange + "_mod"
+        modifier = parseInt(modifier, 10) >= 0 ? `+${modifier}`: modifier.toString()
+        this.setState({
+            [statToChange]: event.target.value,
+            [modifierKey]: modifier
+        })
         
     }
 }

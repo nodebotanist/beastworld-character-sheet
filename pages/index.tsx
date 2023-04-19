@@ -1,4 +1,4 @@
-import {StatsBlock} from '../components/stats-block'
+import CharacterSheet from '../components/character-sheet'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <main>
-      <StatsBlock />
+      <CharacterSheet />
     </main>
   )
 }

@@ -8,3 +8,72 @@
     width: 1241px;
     height: 1583px;
 }
+
+#stats > input {
+    position: absolute;
+    display: block;
+}
+
+#stats-str {
+    margin-top: 400px;
+    margin-left: 111px;
+}
+
+#stats-dex {
+    margin-top: 513px;
+    margin-left: 111px;
+}
+
+#stats-con {
+    margin-top: 625px;
+    margin-left: 111px;
+}
+
+#stats-int {
+    margin-top: 739px;
+    margin-left: 111px;
+}
+
+#stats-wis {
+    margin-top: 853px;
+    margin-left: 111px;
+}
+
+#stats-cha {
+    margin-top: 967px;
+    margin-left: 111px;
+}
+
+#modifiers > div {
+    position: absolute;
+}
+
+#modifiers-str {
+    margin-top: 358px;
+    margin-left: 129px;
+}
+
+#modifiers-dex {
+    margin-top: 472px;
+    margin-left: 129px;
+}
+
+#modifiers-con {
+    margin-top: 585px;
+    margin-left: 129px;
+}
+
+#modifiers-int {
+    margin-top: 698px;
+    margin-left: 129px;
+}
+
+#modifiers-wis {
+    margin-top: 812px;
+    margin-left: 129px;
+}
+
+#modifiers-cha {
+    margin-top: 927px;
+    margin-left: 129px;
+}

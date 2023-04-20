@@ -3,5 +3,7 @@
 @tailwind utilities;
 
 .character-sheet-background {
-    background-image: url('/images/char-sheet.jpg')
+    background-image: url('/images/char-sheet.jpg');
+    width: 1241px;
+    height: 1683px;
 }

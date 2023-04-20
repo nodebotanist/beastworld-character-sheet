@@ -4,6 +4,7 @@
 
 .character-sheet-background {
     background-image: url('/images/char-sheet.jpg');
+    background-size: 1241px 1583px;
     width: 1241px;
-    height: 1683px;
+    height: 1583px;
 }

@@ -77,3 +77,47 @@
     margin-top: 927px;
     margin-left: 129px;
 }
+
+/* Begin skills block */
+.skills {
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 205px;
+    height: 685px;
+    width: 155px;
+}
+
+.skills #skill-profs {
+    position: relative;
+}
+
+.skills #skill-profs div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 11px;
+}
+
+.skills #skill-profs .str-skill-profs {
+    margin-top: 12px;
+}
+
+.skills #skill-profs .dex-skill-profs {
+    margin-top: 125px;
+}
+
+.skills #skill-profs .con-skill-profs {
+    margin-top: 237px;
+}
+
+.skills #skill-profs .int-skill-profs {
+    margin-top: 352px;
+}
+
+.skills #skill-profs .wis-skill-profs {
+    margin-top: 465px;
+}
+
+.skills #skill-profs .cha-skill-profs {
+    margin-top: 580px;
+}

@@ -96,10 +96,12 @@
     display: flex;
     flex-direction: column;
     margin-left: 11px;
+    row-gap:3px;
 }
 
 .skills #skill-profs .str-skill-profs {
     margin-top: 12px;
+    row-gap:3px;
 }
 
 .skills #skill-profs .dex-skill-profs {

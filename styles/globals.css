@@ -163,3 +163,33 @@
 .skills #skill-values .cha-skills {
     margin-top: 572px;
 }
+
+/* Begin Health block */
+.hp-block {
+    position: absolute;
+    margin-top: 192px;
+    margin-left: 400px;
+    height: 130px;
+    width: 370px;
+    font-size: 2em;
+}
+
+.hp-block div {
+    display:inline-block;
+    position: absolute;
+}
+
+.hp-block .current-hp {
+    margin-top: 22px;
+    margin-left:45px;
+}
+
+.hp-block .max-hp {
+    margin-top: 22px;
+    margin-left: 167px;
+}
+
+.hp-block .temp-hp {
+    margin-top: 22px;
+    margin-left: 293px;
+}

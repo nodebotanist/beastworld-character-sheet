@@ -96,30 +96,42 @@ export default class SkillsBlock extends Component {
                 </div>
             </form>
             <div id="skill-values">
-                <span id="strSavingThrow">{this.state.strSavingThrow}</span>
-                <span id="athletics">{this.state.athletics}</span>
-                <span id="dexSavingThrow">{this.state.dexSavingThrow}</span>
-                <span id="acrobatics">{this.state.acrobatics}</span>
-                <span id="sleightOfHand">{this.state.sleightOfHand}</span>
-                <span id="stealth">{this.state.stealth}</span>
-                <span id="conSavingThrow">{this.state.conSavingThrow}</span>
-                <span id="intSavingThrow">{this.state.intSavingThrow}</span>
-                <span id="arcana">{this.state.arcana}</span>
-                <span id="history">{this.state.history}</span>
-                <span id="investigation">{this.state.investigation}</span>
-                <span id="nature">{this.state.nature}</span>
-                <span id="religion">{this.state.religion}</span>
-                <span id="wisSavingThrow">{this.state.wisSavingThrow}</span>
-                <span id="animalHandling">{this.state.animalHandling}</span>
-                <span id="insight">{this.state.insight}</span>
-                <span id="medicine">{this.state.medicine}</span>
-                <span id="perception">{this.state.perception}</span>
-                <span id="survival">{this.state.survival}</span>
-                <span id="chaSavingThrow">{this.state.chaSavingThrow}</span>
-                <span id="deception">{this.state.deception}</span>
-                <span id="intimidation">{this.state.intimidation}</span>
-                <span id="performance">{this.state.performance}</span>
-                <span id="persuasion">{this.state.persuasion}</span>
+                <div className="str-skills">
+                    <span id="strSavingThrow">{this.state.strSavingThrow}</span>
+                    <span id="athletics">{this.state.athletics}</span>
+                </div>
+                <div className="dex-skills">
+                    <span id="dexSavingThrow">{this.state.dexSavingThrow}</span>
+                    <span id="acrobatics">{this.state.acrobatics}</span>
+                    <span id="sleightOfHand">{this.state.sleightOfHand}</span>
+                    <span id="stealth">{this.state.stealth}</span>
+                </div>
+                <div className="con-skills">
+                    <span id="conSavingThrow">{this.state.conSavingThrow}</span>
+                </div>
+                <div className="int-skills">
+                    <span id="intSavingThrow">{this.state.intSavingThrow}</span>
+                    <span id="arcana">{this.state.arcana}</span>
+                    <span id="history">{this.state.history}</span>
+                    <span id="investigation">{this.state.investigation}</span>
+                    <span id="nature">{this.state.nature}</span>
+                    <span id="religion">{this.state.religion}</span>
+                </div>
+                <div className="wis-skills">
+                    <span id="wisSavingThrow">{this.state.wisSavingThrow}</span>
+                    <span id="animalHandling">{this.state.animalHandling}</span>
+                    <span id="insight">{this.state.insight}</span>
+                    <span id="medicine">{this.state.medicine}</span>
+                    <span id="perception">{this.state.perception}</span>
+                    <span id="survival">{this.state.survival}</span>
+                </div>
+                <div className="cha-skills">
+                    <span id="chaSavingThrow">{this.state.chaSavingThrow}</span>
+                    <span id="deception">{this.state.deception}</span>
+                    <span id="intimidation">{this.state.intimidation}</span>
+                    <span id="performance">{this.state.performance}</span>
+                    <span id="persuasion">{this.state.persuasion}</span>
+                </div>
             </div>
         </div>
     }

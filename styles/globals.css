@@ -12,6 +12,7 @@
 #stats > input {
     position: absolute;
     display: block;
+    text-align: center;
 }
 
 #stats-str {
@@ -101,7 +102,6 @@
 
 .skills #skill-profs .str-skill-profs {
     margin-top: 12px;
-    row-gap:3px;
 }
 
 .skills #skill-profs .dex-skill-profs {
@@ -122,4 +122,44 @@
 
 .skills #skill-profs .cha-skill-profs {
     margin-top: 580px;
+}
+
+.skills #skill-values {
+    position: relative;
+}
+
+.skills #skill-values div {
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 37px;
+    row-gap: 0px;
+}
+
+.skills #skill-values div span {
+    height: 16px;
+}
+
+.skills #skill-values .str-skills {
+    margin-top: 2px;
+}
+
+.skills #skill-values .dex-skills {
+    margin-top: 116px;
+}
+
+.skills #skill-values .con-skills {
+    margin-top: 229px;
+}
+
+.skills #skill-values .int-skills {
+    margin-top: 344px;
+}
+
+.skills #skill-values .wis-skills {
+    margin-top: 458px;
+}
+
+.skills #skill-values .cha-skills {
+    margin-top: 572px;
 }

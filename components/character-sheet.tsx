@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import StatsBlock from './stats-block'
 import SkillsBlock from './skills-block'
 import HealthBlock from './health-block'
+import ACEtcBlock from './ac-etc-block'
 
 export default class CharacterSheet extends Component {
     constructor (props) {
@@ -13,6 +14,7 @@ export default class CharacterSheet extends Component {
             <StatsBlock />
             <SkillsBlock />
             <HealthBlock />
+            <ACEtcBlock />
         </div>
     }
 }

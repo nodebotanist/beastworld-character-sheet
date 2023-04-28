@@ -211,3 +211,39 @@
     font-size: 2em;
     text-align:center;
 }
+
+/* begin money block */
+
+#money-block {
+    position:absolute;
+    margin-top: 865px;
+    margin-left: 850px;
+    width: 300px;
+    height: 150px;
+}
+
+#money-block input {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+}
+
+#money-block #copper {
+    margin-top: 30px;
+    margin-left: 65px;
+}
+
+#money-block #silver {
+    margin-top: 30px;
+    margin-left: 192px;
+}
+
+#money-block #gold {
+    margin-top: 84px;
+    margin-left: 130px;
+}
+
+#money-block #platinum {
+    margin-top: 84px;
+    margin-left: 255px;
+}

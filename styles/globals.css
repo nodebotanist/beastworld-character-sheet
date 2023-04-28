@@ -193,3 +193,21 @@
     margin-top: 22px;
     margin-left: 293px;
 }
+
+/* begin ac-etc-block */
+
+#ac-etc-block {
+    display: flex;
+    flex-direction:column;
+    row-gap: 5.2em;
+    position: absolute;
+    margin-left: 730px;
+    margin-top: 395px;
+    width: 105px;
+    height: 460px;
+}
+
+#ac-etc-block span {
+    font-size: 2em;
+    text-align:center;
+}

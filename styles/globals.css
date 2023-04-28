@@ -247,3 +247,41 @@
     margin-top: 84px;
     margin-left: 255px;
 }
+
+/* begin character info block */
+
+#character-info-block {
+    display: inline-block;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 456px;
+}
+
+#character-info-block input {
+    display: inline-block;
+    position: absolute;
+}
+
+#character-info-block #species {
+    margin-top: 3px;
+    margin-left: 3px;
+    width: 318px;
+}
+
+#character-info-block #alignment {
+    margin-top: 3px;
+    margin-left: 432px;
+    width: 255px;
+}
+
+#character-info-block #homeland {
+    margin-top: 39px;
+    margin-left: 37px;
+    width: 283px;
+}
+
+#character-info-block #background {
+    margin-top: 39px;
+    margin-left: 449px;
+    width: 236px;
+}

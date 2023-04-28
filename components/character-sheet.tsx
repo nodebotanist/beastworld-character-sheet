@@ -4,6 +4,7 @@ import SkillsBlock from './skills-block'
 import HealthBlock from './health-block'
 import ACEtcBlock from './ac-etc-block'
 import MoneyBlock from './money-block'
+import CharacterInfoBlock from './character-info-block'
 
 export default class CharacterSheet extends Component {
     constructor (props) {
@@ -12,6 +13,7 @@ export default class CharacterSheet extends Component {
 
     render() {
         return <div className="character-sheet-background">
+            <CharacterInfoBlock />
             <StatsBlock />
             <SkillsBlock />
             <HealthBlock />

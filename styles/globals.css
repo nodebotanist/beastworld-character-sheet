@@ -285,3 +285,59 @@
     margin-left: 449px;
     width: 236px;
 }
+
+/* begin bottom block */
+#bottom-block {
+    position: absolute;
+    margin-left: 75px;
+    margin-top: 1000px;
+    width: 1110px;
+    height: 540px;
+}
+
+#bottom-block textarea {
+    display: inline-block;
+    position: absolute;
+}
+
+#bottom-block textarea[name="profs-and-langs"] {
+    margin-top: 147px;
+    margin-left: 6px;
+    width: 278px;
+    height: 177px;
+}
+
+#bottom-block textarea[name="equipment"] {
+    margin-top: 365px;
+    margin-left: 6px;
+    width: 279px;
+    height: 170px;
+}
+
+#bottom-block textarea[name="class-features"] {
+    margin-top: 78px;
+    margin-left: 304px;
+    width: 427px;
+    height: 448px;
+}
+
+#bottom-block textarea[name="traits-background"] {
+    margin-top: 104px;
+    margin-left: 760px;
+    width: 331px;
+    height: 140px;
+}
+
+#bottom-block textarea[name="traits-species"] {
+    margin-top: 269px;
+    margin-left: 760px;
+    width: 331px;
+    height: 174px;
+}
+
+#bottom-block textarea[name="traits-homeland"] {
+    margin-top: 468px;
+    margin-left: 760px;
+    width: 329px;
+    height: 44px;
+}

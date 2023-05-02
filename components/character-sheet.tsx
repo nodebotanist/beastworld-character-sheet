@@ -3,6 +3,7 @@ import StatsBlock from './stats-block'
 import SkillsBlock from './skills-block'
 import HealthBlock from './health-block'
 import ACEtcBlock from './ac-etc-block'
+import AttacksSpellcastingBlock from './attacks-spellcasting-block'
 import MoneyBlock from './money-block'
 import CharacterInfoBlock from './character-info-block'
 import BottomBlock from './bottom-block'
@@ -19,6 +20,7 @@ export default class CharacterSheet extends Component {
             <SkillsBlock />
             <HealthBlock />
             <ACEtcBlock />
+            <AttacksSpellcastingBlock />
             <MoneyBlock />
             <BottomBlock />
         </div>

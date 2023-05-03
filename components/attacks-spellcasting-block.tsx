@@ -4,9 +4,11 @@ import {v4} from 'uuid'
 class AttackOrSpell {
     constructor (props) {
         this.id = props.id || v4()
-        this.name = props.name || "",
+        this.name = props.name || "Unarmed attack",
         this.atkBonus = props.atkBonus || 0,
-        this.dmg = props.dmg || "0d0",
+        this.numDmgDice = props.numDmgDice || 1,
+        this.dmgDice = props.dmgDice || 4,
+        this.dmgMod = props.dmgMod || 0,
         this.dmgType = props.dmgType || "bludgeoning"
     }
 }
@@ -24,8 +26,13 @@ export default class AttacksSpellcastingBlock extends Component {
             {this.state.attacksAndSpells.map((attackOrSpell) => {
                 return <div className="row" key={attackOrSpell.id}>
                     <input type="text" value={attackOrSpell.name} onChange={this.onChangeAttackAndSpells.bind(this)} className="attack-or-spell-name" id={`${attackOrSpell.id}-name`} />
-                    <input type="text" value={attackOrSpell.atkBonus} onChange={this.onChangeAttackAndSpells.bind(this)} className="attack-or-spell-atkBonus" id={`${attackOrSpell.id}-atkBonus`} />
-                    <input type="text" value={attackOrSpell.dmg} onChange={this.onChangeAttackAndSpells.bind(this)} className="attack-or-spell-dmg" id={`${attackOrSpell.id}-dmg`} />
+                    <span className="dmg-atk-bonus-prefix">+</span>
+                    <input type="number" value={attackOrSpell.atkBonus} onChange={this.onChangeAttackAndSpells.bind(this)} className="attack-or-spell-atkBonus" id={`${attackOrSpell.id}-atkBonus`} min="0" max="50" />
+                    <input type="number" value={attackOrSpell.numDmgDice} onChange={this.onChangeAttackAndSpells.bind(this)} min="0" max="50" className="attack-or-spell-numDmgDice" id={`${attackOrSpell.id}-numDmgDice`}/>
+                    <span className="dmg-dice-divider">d</span>
+                    <input type="number" value={attackOrSpell.dmgDice} onChange={this.onChangeAttackAndSpells.bind(this)} min="0" max="50" className="attack-or-spell-dmgDice" id={`${attackOrSpell.id}-dmgDice`}/>
+                    <span className="dmg-dice-mod-divider">+</span>
+                    <input type="number" value={attackOrSpell.dmgMod} onChange={this.onChangeAttackAndSpells.bind(this)} min="0" max="50" className="attack-or-spell-dmgMod" id={`${attackOrSpell.id}-dmgMod`}/>
                     <input type="text" value={attackOrSpell.dmgType} onChange={this.onChangeAttackAndSpells.bind(this)} className="attack-or-spell-dmgType" id={`${attackOrSpell.id}-dmgType`} />
                 </div>
             })}

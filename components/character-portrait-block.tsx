@@ -11,20 +11,22 @@ export default class CharacterPortraitBlock extends Component {
     render() {
         return <div id="character-portrait-block">
             <img className="portrait-preview" />
-            <input type="file" id="portrait-picker" accept=".jpeg, .jpg, .png" onInput={this.renderPreview} />
+            <input type="file" id="portrait-picker" accept=".jpeg, .jpg, .png" onInput={this.renderPreview.bind(this)} />
         </div>
     }
 
     renderPreview(event) {
-        console.log(event.target.files)
-        if(event.target.files && event.target.files[0]){
-            let reader = new FileReader()
-            reader.addEventListener("load", (event) => {
-                let previewDiv = document.querySelector("#character-portrait-block .portrait-preview")
-                previewDiv?.setAttribute('src', event.target.result)
-            })
+        let resultImage = (event && event.target && event.target.files && event.target.files[0]) ? event.target.files[0] : this.state.portrait  
+        this.setState({
+            portrait: resultImage
+        })
 
-            reader.readAsDataURL(event.target.files[0])
-        }
+        let reader = new FileReader()
+        reader.addEventListener("load", (event) => {
+            let previewDiv = document.querySelector("#character-portrait-block .portrait-preview")
+            previewDiv?.setAttribute('src', event.target.result)
+        })
+
+        reader.readAsDataURL(resultImage)
     }
 }

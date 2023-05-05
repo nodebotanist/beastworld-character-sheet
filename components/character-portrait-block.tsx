@@ -1,4 +1,3 @@
-import { Readex_Pro } from "next/font/google"
 import {Component, ReactPropTypes} from "react"
 
 export default class CharacterPortraitBlock extends Component {

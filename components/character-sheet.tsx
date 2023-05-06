@@ -30,7 +30,13 @@ export default class CharacterSheet extends Component {
             copper: props.copper,
             silver: props.silver,
             gold: props.gold,
-            platinum: props.platinum
+            platinum: props.platinum,
+            profAndLangs: props.profAndLangs,
+            equipment: props.equipment,
+            classFeatures: props.classFeatures,
+            traitsBackground: props.traitsBackground,
+            traitsSpecies: props.traitsSpecies,
+            traitsHomeland: props.traitsHomeland,
         }
     }
 
@@ -64,7 +70,14 @@ export default class CharacterSheet extends Component {
                 gold={this.state.gold}
                 platinum={this.state.platinum}
             />
-            <BottomBlock />
+            <BottomBlock 
+                profAndLangs= {this.state.profAndLangs}
+                equipment= {this.state.equipment}
+                classFeatures= {this.state.classFeatures}
+                traitsBackground= {this.state.traitsBackground}
+                traitsSpecies= {this.state.traitsSpecies}
+                traitsHomeland= {this.state.traitsHomeland}
+            />
         </div>
     }
 }

@@ -75,6 +75,12 @@ export default function Home() {
           silver={0}
           gold={0}
           platinum={0}
+          profAndLangs= {""}
+          equipment= {""}
+          classFeatures= {""}
+          traitsBackground= {""}
+          traitsSpecies= {""}
+          traitsHomeland= {""}
         />
     </main>
   )

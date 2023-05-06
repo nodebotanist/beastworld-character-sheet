@@ -41,3 +41,12 @@
 
 ### props:
 
+## CharacterPortraitBlock state:
+
+{
+    portrait: HTMLImageElement | undefined
+}
+
+### props:
+
+portrait: HTMLImageElement | undefined

@@ -27,6 +27,10 @@ export default class CharacterSheet extends Component {
             maxHP: props.maxHP,
             currentHP: props.currentHP,
             tempHP: props.tempHP,
+            copper: props.copper,
+            silver: props.silver,
+            gold: props.gold,
+            platinum: props.platinum
         }
     }
 
@@ -54,7 +58,12 @@ export default class CharacterSheet extends Component {
             <ACEtcBlock />
             <CharacterPortraitBlock />
             <AttacksSpellcastingBlock />
-            <MoneyBlock />
+            <MoneyBlock
+                copper={this.state.copper}
+                silver={this.state.silver}
+                gold={this.state.gold}
+                platinum={this.state.platinum}
+            />
             <BottomBlock />
         </div>
     }

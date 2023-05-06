@@ -71,6 +71,10 @@ export default function Home() {
           currentHP={20}
           maxHP={20}
           tempHP={0}
+          copper={0}
+          silver={0}
+          gold={0}
+          platinum={0}
         />
     </main>
   )

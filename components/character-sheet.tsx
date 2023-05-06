@@ -24,6 +24,9 @@ export default class CharacterSheet extends Component {
             profBonus: props.profBonus,
             inspiration: props.inspiration,
             passivePerception: props.passivePerception,
+            maxHP: props.maxHP,
+            currentHP: props.currentHP,
+            tempHP: props.tempHP,
         }
     }
 
@@ -43,7 +46,11 @@ export default class CharacterSheet extends Component {
                 inspiration={this.state.inspiration}
                 passivePerception={this.state.passivePerception}
             />
-            <HealthBlock />
+            <HealthBlock 
+                currentHP={this.state.currentHP}
+                maxHP={this.state.maxHP}
+                tempHP={this.state.tempHP}    
+            />
             <ACEtcBlock />
             <CharacterPortraitBlock />
             <AttacksSpellcastingBlock />

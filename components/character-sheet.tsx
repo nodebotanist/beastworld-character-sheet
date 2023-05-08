@@ -37,6 +37,7 @@ export default class CharacterSheet extends Component {
             traitsBackground: props.traitsBackground,
             traitsSpecies: props.traitsSpecies,
             traitsHomeland: props.traitsHomeland,
+            attacksAndSpells: props.attacksAndSpells,
         }
     }
 
@@ -63,7 +64,9 @@ export default class CharacterSheet extends Component {
             />
             <ACEtcBlock />
             <CharacterPortraitBlock />
-            <AttacksSpellcastingBlock />
+            <AttacksSpellcastingBlock 
+                attacksAndSpells={this.state.attacksAndSpells}
+            />
             <MoneyBlock
                 copper={this.state.copper}
                 silver={this.state.silver}

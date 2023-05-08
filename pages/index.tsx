@@ -1,7 +1,4 @@
 import CharacterSheet from '../components/character-sheet'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -81,6 +78,7 @@ export default function Home() {
           traitsBackground= {""}
           traitsSpecies= {""}
           traitsHomeland= {""}
+          attacksAndSpells= { [{ id: "hehetuoetudaoehtsudhtaoeudt", name: '', atkBonus: 0, dmgDice: 4, dmgMod: 0, dmgType: "" }] }
         />
     </main>
   )

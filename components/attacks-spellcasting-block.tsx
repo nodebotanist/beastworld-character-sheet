@@ -17,7 +17,7 @@ export default class AttacksSpellcastingBlock extends Component {
     constructor(props: ReactPropTypes) {
         super(props)
         this.state = {
-            attacksAndSpells: props.attacksAndSpells || [new AttackOrSpell({}), new AttackOrSpell({}), new AttackOrSpell({})],
+            attacksAndSpells: props.attacksAndSpells,
         }
     }
 

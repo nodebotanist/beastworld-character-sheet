@@ -79,6 +79,10 @@ export default function Home() {
           traitsSpecies= {""}
           traitsHomeland= {""}
           attacksAndSpells= { [{ id: "hehetuoetudaoehtsudhtaoeudt", name: '', atkBonus: 0, dmgDice: 4, dmgMod: 0, dmgType: "" }] }
+          AC={0}
+          init={0}
+          walkingSpeed={"0ft"}
+          hitDice={"d6"}
         />
     </main>
   )

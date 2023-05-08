@@ -38,6 +38,10 @@ export default class CharacterSheet extends Component {
             traitsSpecies: props.traitsSpecies,
             traitsHomeland: props.traitsHomeland,
             attacksAndSpells: props.attacksAndSpells,
+            AC: props.AC,
+            init: props.init,
+            walkingSpeed: props.walkingSpeed,
+            hitDice: props.hitDice
         }
     }
 
@@ -62,7 +66,12 @@ export default class CharacterSheet extends Component {
                 maxHP={this.state.maxHP}
                 tempHP={this.state.tempHP}    
             />
-            <ACEtcBlock />
+            <ACEtcBlock
+                AC={this.state.AC}
+                init={this.state.init}
+                walkingSpeed={this.state.walkingSpeed}
+                hitDice={this.state.hitDice}
+            />
             <CharacterPortraitBlock />
             <AttacksSpellcastingBlock 
                 attacksAndSpells={this.state.attacksAndSpells}

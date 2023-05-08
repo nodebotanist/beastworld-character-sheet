@@ -201,15 +201,16 @@
     flex-direction:column;
     row-gap: 5.2em;
     position: absolute;
-    margin-left: 730px;
-    margin-top: 395px;
-    width: 105px;
+    margin-left: 746px;
+    margin-top: 400px;
+    width: 70px;
     height: 460px;
 }
 
-#ac-etc-block span {
+#ac-etc-block input {
     font-size: 2em;
-    text-align:center;
+    text-align: center;
+    border-radius: 20px;
 }
 
 /* begin money block */

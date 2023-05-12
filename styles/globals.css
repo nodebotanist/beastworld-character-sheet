@@ -165,33 +165,35 @@
 }
 
 /* Begin Health block */
-.hp-block {
+#hp-block {
     position: absolute;
     margin-top: 192px;
     margin-left: 400px;
     height: 130px;
     width: 370px;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
-.hp-block div {
+#hp-block input {
     display:inline-block;
     position: absolute;
+    width: 50px;
+    text-align: center;
 }
 
-.hp-block .current-hp {
+#hp-block #current-hp {
     margin-top: 22px;
-    margin-left:45px;
+    margin-left:40px;
 }
 
-.hp-block .max-hp {
+#hp-block #max-hp {
     margin-top: 22px;
-    margin-left: 167px;
+    margin-left: 162px;
 }
 
-.hp-block .temp-hp {
+#hp-block #temp-hp {
     margin-top: 22px;
-    margin-left: 293px;
+    margin-left: 276px;
 }
 
 /* begin ac-etc-block */

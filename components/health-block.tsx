@@ -12,10 +12,17 @@ export default class HealthBlock extends Component {
     }
 
     render () {
-        return <div className="hp-block">
-            <div className="current-hp">{this.state.currentHP}</div>
-            <div className="max-hp">{this.state.maxHP}</div>
-            <div className="temp-hp">{this.state.tempHP}</div>
+        return <div id="hp-block">
+            <input type="number" min="-50" max="50" id="current-hp" value={this.state.currentHP} onChange={this.onChangeHealth.bind(this)} />
+            <input type="number" min="0" max="50" id="max-hp" value={this.state.maxHP} onChange={this.onChangeHealth.bind(this)} />
+            <input type="number" min="-50" max="50" id="temp-hp" value={this.state.tempHP} onChange={this.onChangeHealth.bind(this)} />
         </div>
+    }
+
+    onChangeHealth(event) {
+        let field = event.target.id.replace('-hp', 'HP')
+        this.setState({
+            [field]: event.target.value
+        })
     }
 }

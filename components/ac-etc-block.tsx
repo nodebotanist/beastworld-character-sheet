@@ -1,7 +1,19 @@
-import {Component, ReactPropTypes} from "react"
+import {ChangeEvent, Component} from "react"
 
-export default class ACEtcBlock extends Component {
-    constructor(props: ReactPropTypes) {
+interface ACEtcProps {
+    AC: string,
+    init: string,
+    walkingSpeed: string,
+    hitDice: string
+}
+
+export default class ACEtcBlock extends Component<{}, {
+    AC: string,
+    init: string,
+    walkingSpeed: string,
+    hitDice: string
+}> {
+    constructor(props: ACEtcProps) {
         super(props)
         this.state = {
             AC: props.AC,
@@ -20,12 +32,19 @@ export default class ACEtcBlock extends Component {
         </div>
     }
 
-    onAcEtcChange(event) {
-        let target=event.target.id
-        let value= event.target.value
-
-        this.setState({
-            [target]: value
-        })
+    onAcEtcChange(event: ChangeEvent<HTMLInputElement>) {
+        let target = event.target.id
+        let value = event.target.value.toString()
+        let result: {
+            AC?: string | undefined,
+            init?: string | undefined,
+            walkingSpeed?: string | undefined,
+            hitDice?: string | undefined,
+        } = {}
+        switch(target) {
+            case "AC":
+                result.AC = value
+        }
+        this.setState(result)
     }
 }

@@ -4,18 +4,18 @@ export default class StatsBlock extends Component {
     constructor(props: ReactPropTypes) {
         super(props)
         this.state = {
-            str: props.str || 10,
-            dex: props.dex || 10,
-            con: props.con || 10,
-            int: props.int || 10,
-            wis: props.wis || 10,
-            cha: props.cha || 10,
-            str_mod: props.str_mod || '+0',
-            dex_mod: props.dex_mod || '+0',
-            con_mod: props.con_mod || '+0',
-            int_mod: props.int_mod || '+0',
-            wis_mod: props.wis_mod || '+0',
-            cha_mod: props.cha_mod || '+0',
+            str: props.str,
+            dex: props.dex,
+            con: props.con,
+            int: props.int,
+            wis: props.wis,
+            cha: props.cha,
+            str_mod: `+${Math.floor((props.str - 10)/2)}`,
+            dex_mod: `+${Math.floor((props.dex - 10)/2)}`,
+            con_mod: `+${Math.floor((props.con - 10)/2)}`,
+            int_mod: `+${Math.floor((props.int - 10)/2)}`,
+            wis_mod: `+${Math.floor((props.wis - 10)/2)}`,
+            cha_mod: `+${Math.floor((props.cha - 10)/2)}`,
         }
     }
 

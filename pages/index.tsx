@@ -4,12 +4,12 @@ export default function Home() {
   return (
     <main>
       <CharacterSheet 
-        str={0} 
-        dex={0} 
-        con={0} 
-        int={0} 
-        wis={0} 
-        cha={0} 
+        str={10} 
+        dex={10} 
+        con={10} 
+        int={10} 
+        wis={10} 
+        cha={10} 
         skills={{
             "strSavingThrowProf": false,
             "strSavingThrow": 0,

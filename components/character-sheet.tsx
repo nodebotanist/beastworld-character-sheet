@@ -50,6 +50,7 @@ export default class CharacterSheet extends Component {
             <CharacterInfoBlock />
             <StatsProfsLevelsBlock 
                 str={this.state.str}
+                dex={this.state.dex}
                 con={this.state.con}
                 int={this.state.int}
                 wis={this.state.wis}

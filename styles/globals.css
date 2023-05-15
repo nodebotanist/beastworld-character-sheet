@@ -1,0 +1,450 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+    position: absolute;
+    max-width: none;
+    height: none;
+}
+
+.bg {
+    height: 1583px;
+    width: 1241px;
+}
+
+.character-sheet-background {
+    background-size: 1241px 1583px;
+    width: 1241px;
+    height: 1583px;
+}
+
+#stats > input {
+    position: absolute;
+    display: block;
+    text-align: center;
+}
+
+#stats-str {
+    margin-top: 400px;
+    margin-left: 111px;
+}
+
+#stats-dex {
+    margin-top: 513px;
+    margin-left: 111px;
+}
+
+#stats-con {
+    margin-top: 625px;
+    margin-left: 111px;
+}
+
+#stats-int {
+    margin-top: 739px;
+    margin-left: 111px;
+}
+
+#stats-wis {
+    margin-top: 853px;
+    margin-left: 111px;
+}
+
+#stats-cha {
+    margin-top: 967px;
+    margin-left: 111px;
+}
+
+#modifiers > div {
+    position: absolute;
+}
+
+#modifiers-str {
+    margin-top: 358px;
+    margin-left: 129px;
+}
+
+#modifiers-dex {
+    margin-top: 472px;
+    margin-left: 129px;
+}
+
+#modifiers-con {
+    margin-top: 585px;
+    margin-left: 129px;
+}
+
+#modifiers-int {
+    margin-top: 698px;
+    margin-left: 129px;
+}
+
+#modifiers-wis {
+    margin-top: 812px;
+    margin-left: 129px;
+}
+
+#modifiers-cha {
+    margin-top: 927px;
+    margin-left: 129px;
+}
+
+/* Begin skills block */
+.skills {
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 205px;
+    height: 685px;
+    width: 155px;
+}
+
+.skills #skill-profs {
+    position: relative;
+}
+
+.skills #skill-profs div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 11px;
+    row-gap:3px;
+}
+
+.skills #skill-profs .str-skill-profs {
+    margin-top: 12px;
+}
+
+.skills #skill-profs .dex-skill-profs {
+    margin-top: 125px;
+}
+
+.skills #skill-profs .con-skill-profs {
+    margin-top: 237px;
+}
+
+.skills #skill-profs .int-skill-profs {
+    margin-top: 352px;
+}
+
+.skills #skill-profs .wis-skill-profs {
+    margin-top: 465px;
+}
+
+.skills #skill-profs .cha-skill-profs {
+    margin-top: 580px;
+}
+
+.skills #skill-values {
+    position: relative;
+}
+
+.skills #skill-values div {
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 37px;
+    row-gap: 0px;
+}
+
+.skills #skill-values div span {
+    height: 16px;
+}
+
+.skills #skill-values .str-skills {
+    margin-top: 2px;
+}
+
+.skills #skill-values .dex-skills {
+    margin-top: 116px;
+}
+
+.skills #skill-values .con-skills {
+    margin-top: 229px;
+}
+
+.skills #skill-values .int-skills {
+    margin-top: 344px;
+}
+
+.skills #skill-values .wis-skills {
+    margin-top: 458px;
+}
+
+.skills #skill-values .cha-skills {
+    margin-top: 572px;
+}
+
+/* Begin Health block */
+#hp-block {
+    position: absolute;
+    margin-top: 192px;
+    margin-left: 400px;
+    height: 130px;
+    width: 370px;
+    font-size: 1.5em;
+}
+
+#hp-block input {
+    display:inline-block;
+    position: absolute;
+    width: 50px;
+    text-align: center;
+}
+
+#hp-block #current-hp {
+    margin-top: 22px;
+    margin-left:40px;
+}
+
+#hp-block #max-hp {
+    margin-top: 22px;
+    margin-left: 162px;
+}
+
+#hp-block #temp-hp {
+    margin-top: 22px;
+    margin-left: 276px;
+}
+
+/* begin ac-etc-block */
+
+#ac-etc-block {
+    display: flex;
+    flex-direction:column;
+    row-gap: 5.2em;
+    position: absolute;
+    margin-left: 746px;
+    margin-top: 400px;
+    width: 70px;
+    height: 460px;
+}
+
+#ac-etc-block input {
+    font-size: 2em;
+    text-align: center;
+    border-radius: 20px;
+}
+
+/* begin money block */
+
+#money-block {
+    position:absolute;
+    margin-top: 865px;
+    margin-left: 850px;
+    width: 300px;
+    height: 150px;
+}
+
+#money-block input {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+}
+
+#money-block #copper {
+    margin-top: 30px;
+    margin-left: 65px;
+}
+
+#money-block #silver {
+    margin-top: 30px;
+    margin-left: 192px;
+}
+
+#money-block #gold {
+    margin-top: 84px;
+    margin-left: 130px;
+}
+
+#money-block #platinum {
+    margin-top: 84px;
+    margin-left: 255px;
+}
+
+/* begin character info block */
+
+#character-info-block {
+    display: inline-block;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 456px;
+}
+
+#character-info-block input {
+    display: inline-block;
+    position: absolute;
+}
+
+#character-info-block #species {
+    margin-top: 3px;
+    margin-left: 3px;
+    width: 318px;
+}
+
+#character-info-block #alignment {
+    margin-top: 3px;
+    margin-left: 432px;
+    width: 255px;
+}
+
+#character-info-block #homeland {
+    margin-top: 39px;
+    margin-left: 37px;
+    width: 283px;
+}
+
+#character-info-block #background {
+    margin-top: 39px;
+    margin-left: 449px;
+    width: 236px;
+}
+
+/* begin bottom block */
+#bottom-block {
+    position: absolute;
+    margin-left: 75px;
+    margin-top: 1000px;
+    width: 1110px;
+    height: 540px;
+}
+
+#bottom-block textarea {
+    display: inline-block;
+    position: absolute;
+}
+
+#bottom-block textarea[name="profsAndLangs"] {
+    margin-top: 147px;
+    margin-left: 6px;
+    width: 278px;
+    height: 177px;
+}
+
+#bottom-block textarea[name="equipment"] {
+    margin-top: 365px;
+    margin-left: 6px;
+    width: 279px;
+    height: 170px;
+}
+
+#bottom-block textarea[name="classFeatures"] {
+    margin-top: 78px;
+    margin-left: 304px;
+    width: 427px;
+    height: 448px;
+}
+
+#bottom-block textarea[name="traitsBackground"] {
+    margin-top: 104px;
+    margin-left: 760px;
+    width: 331px;
+    height: 140px;
+}
+
+#bottom-block textarea[name="traitsSpecies"] {
+    margin-top: 269px;
+    margin-left: 760px;
+    width: 331px;
+    height: 174px;
+}
+
+#bottom-block textarea[name="traitsHomeland"] {
+    margin-top: 468px;
+    margin-left: 760px;
+    width: 329px;
+    height: 44px;
+}
+
+/* begin attack-spellcasting-block */
+
+#attack-spellcasting-block {
+    position: absolute;
+    margin-left: 856px;
+    margin-top: 413px;
+    width: 318px;
+    font-size: .75em;
+}
+
+#attack-spellcasting-block .row {
+    width: 100%;
+    height: 46px;
+    margin-bottom: 1px;
+}
+
+#attack-spellcasting-block .row .attack-or-spell-name {
+    position: absolute;
+    height: 45px;
+    width: 125px;
+}
+
+#attack-spellcasting-block .row .dmg-atk-bonus-prefix {
+    position: absolute;
+    margin-top: 16px;
+    margin-left: 130px;
+}
+
+#attack-spellcasting-block .row .attack-or-spell-atkBonus {
+    position: absolute;
+    margin-left: 142px;
+    height: 43px;
+    width: 31px;
+}
+
+#attack-spellcasting-block .row .attack-or-spell-numDmgDice {
+    position: absolute;
+    margin-left: 175px;
+    width: 25px;
+}
+
+
+#attack-spellcasting-block .row .dmg-dice-divider {
+    position: absolute;
+    margin-left: 201px;
+}
+
+#attack-spellcasting-block .row .attack-or-spell-dmgDice {
+    position: absolute;
+    margin-left: 213px;
+    width: 25px;
+}
+
+#attack-spellcasting-block .row .dmg-dice-mod-divider {
+    position: absolute;
+    margin-left: 240px;
+}
+
+#attack-spellcasting-block .row .attack-or-spell-dmgMod {
+    position: absolute;
+    margin-left: 252px;
+}
+
+#attack-spellcasting-block .row .attack-or-spell-dmgType {
+    position: absolute;
+    margin-left: 176px;
+    margin-top: 19px;
+}
+
+/* begin character portrait black */
+
+#character-portrait-block {
+    position: absolute;
+    margin-top: 365px;
+    margin-left: 377px;
+    width: 328px;
+    height: 570px;
+}
+
+#character-portrait-block .portrait-preview {
+    width: 100%;
+    height: 570px;
+}
+
+#character-portrait-block #portrait-picker {
+    position: absolute;
+    display: none;
+    margin-top: -40px;
+}
+
+#character-portrait-block:hover #portrait-picker {
+    display: block;
+}

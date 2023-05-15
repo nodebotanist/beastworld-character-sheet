@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+
+const { uptime } = require('process')
+
 const nextConfig = {
   reactStrictMode: true,
   typescript: {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Image from 'next/image'
 import HealthBlock from './health-block'
 import ACEtcBlock from './ac-etc-block'
 import CharacterPortraitBlock from './character-portrait-block'
@@ -7,6 +8,8 @@ import MoneyBlock from './money-block'
 import CharacterInfoBlock from './character-info-block'
 import BottomBlock from './bottom-block'
 import StatsProfsLevelsBlock from './stats-profs-levels-block'
+
+import bg from '../public/images/char-sheet.jpg'
 
 export default class CharacterSheet extends Component {
     constructor (props) {
@@ -47,6 +50,7 @@ export default class CharacterSheet extends Component {
 
     render() {
         return <div className="character-sheet-background">
+            <Image class="bg" src={bg} alt="Beastworld Character Sheet page 1" />
             <CharacterInfoBlock />
             <StatsProfsLevelsBlock 
                 str={this.state.str}

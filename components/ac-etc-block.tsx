@@ -1,50 +1,19 @@
-import {ChangeEvent, Component} from "react"
+import React, {useState} from "react"
 
-interface ACEtcProps {
-    AC: string,
-    init: string,
-    walkingSpeed: string,
-    hitDice: string
+const ACEtcBlock = () => {
+    const [ AC, setAC ] = useState(0)
+    const [ init, setInit ] = useState(0)
+    const [ walkingSpeed, setWalkingSpeed ] = useState("0ft")
+    const [ hitDice, setHitDice ] = useState("0d0")
+
+    return (
+    <div id="ac-etc-block">
+        <input type="number" min="0" max="100" id="AC" value={AC} onChange={e => { setAC(Number(e.target.value)) }} />
+        <input type="number" min="0" max="100" id="init" value={init} onChange={ e => {setInit(Number(e.target.value))} } />
+        <input type="text" id="walkingSpeed" value={walkingSpeed} onChange={e => {setWalkingSpeed(e.target.value)} }/>
+        <input type="text" id="hitDice" value={hitDice} onChange={e => {setHitDice(e.target.value)} }/>
+    </div>
+    )
 }
 
-export default class ACEtcBlock extends Component<{}, {
-    AC: string,
-    init: string,
-    walkingSpeed: string,
-    hitDice: string
-}> {
-    constructor(props: ACEtcProps) {
-        super(props)
-        this.state = {
-            AC: props.AC,
-            init: props.init,
-            walkingSpeed: props.walkingSpeed,
-            hitDice: props.hitDice
-        }
-    }
-
-    render() {
-        return <div id="ac-etc-block">
-            <input type="number" min="9" max="100" id="AC" value={this.state.AC} onChange={this.onAcEtcChange.bind(this)} />
-            <input type="number" min="9" max="100" id="init" value={this.state.init} onChange={this.onAcEtcChange.bind(this)} />
-            <input type="text" id="walkingSpeed" value={this.state.walkingSpeed} onChange={this.onAcEtcChange.bind(this)} />
-            <input type="text" id="hitDice" value={this.state.hitDice} onChange={this.onAcEtcChange.bind(this)} />
-        </div>
-    }
-
-    onAcEtcChange(event: ChangeEvent<HTMLInputElement>) {
-        let target = event.target.id
-        let value = event.target.value.toString()
-        let result: {
-            AC?: string | undefined,
-            init?: string | undefined,
-            walkingSpeed?: string | undefined,
-            hitDice?: string | undefined,
-        } = {}
-        switch(target) {
-            case "AC":
-                result.AC = value
-        }
-        this.setState(result)
-    }
-}
+export default ACEtcBlock

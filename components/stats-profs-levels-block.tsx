@@ -24,7 +24,7 @@ export default class StatsProfsLevelsBlock extends Component {
     render() {
         return <div id="stats-profs-levels-block">
             <StatsBlock str={this.state.str} dex={this.state.dex} con={this.state.con} int={this.state.int} wis={this.state.wis} cha={this.state.cha} />
-            <SkillsBlock skills={this.state.skills} />
+            <SkillsBlock skillsInitialState={this.state.skills} />
         </div>
     }
 }

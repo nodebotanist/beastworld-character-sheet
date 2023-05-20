@@ -1,33 +1,22 @@
-import {Component, ReactPropTypes} from "react"
+import React, {useState} from "react"
 
-export default class BottomBlock extends Component {
-    constructor(props: ReactPropTypes) {
-        super(props)
-        this.state = {
-            profsAndLangs: props.profsAndLangs,
-            equipment: props.equipment,
-            classFeatures: props.classFeatures,
-            traitsBackground: props.traitsBackground,
-            traitsSpecies: props.traitsSpecies,
-            traitsHomeland: props.traitsHomeland,
-        }
-    }
+const BottomBlock = ({ classFeatures, equipment, profsAndLangs, traitsBackground, traitsHomeland, traitSpecies }) => {
 
-    render() {
-        return <div id="bottom-block">
-            <textarea name="profsAndLangs" cols="30" rows="10" value={this.state.profAndLangs} onChange={this.onChangeTrait.bind(this)} ></textarea>
-            <textarea name="equipment" cols="30" rows="10" value={this.state.equipment} onChange={this.onChangeTrait.bind(this)} ></textarea>
-            <textarea name="classFeatures" cols="30" rows="10" value={this.state.classFeatures} onChange={this.onChangeTrait.bind(this)} ></textarea>
-            <textarea name="traitsBackground" cols="30" rows="10" value={this.state.traitsBackground} onChange={this.onChangeTrait.bind(this)} ></textarea>
-            <textarea name="traitsSpecies" cols="30" rows="10" value={this.state.traitsSpecies} onChange={this.onChangeTrait.bind(this)} ></textarea>
-            <textarea name="traitsHomeland" cols="30" rows="10" value={this.state.traitsHomeland} onChange={this.onChangeTrait.bind(this)} ></textarea>
-        </div>
-    }
+    const [ profsAndLangsText, setProfsAndLangsText] = useState(profsAndLangs)
+    const [ equipmentText, setEquipmentText ] = useState(equipment)
+    const [ classFeaturesText, setClassFeaturesText] = useState(classFeatures)
+    const [ traitsBackgroundText, setTraitsBackgroundText ] = useState(traitsBackground)
+    const [ traitsSpeciesText, setTraitsSpeciesText ] = useState(traitSpecies)
+    const [ traitsHomelandText, setTraitsHomelandText ] = useState(traitsHomeland)
 
-    onChangeTrait(event) {
-        let type = event.target.name
-        this.setState({
-            [type]: event.target.value
-        })
-    }
+    return <div id="bottom-block">
+        <textarea name="profsAndLangs" cols="30" rows="10" value={profsAndLangsText} onChange={(e) => setProfsAndLangsText(e.target.value)} ></textarea>
+        <textarea name="equipment" cols="30" rows="10" value={equipmentText} onChange={(e) => setEquipmentText(e.target.value)} ></textarea>
+        <textarea name="classFeatures" cols="30" rows="10" value={classFeaturesText} onChange={(e) => setClassFeaturesText(e.target.value)} ></textarea>
+        <textarea name="traitsBackground" cols="30" rows="10" value={traitsBackgroundText} onChange={(e) => setTraitsBackgroundText(e.target.value)} ></textarea>
+        <textarea name="traitsSpecies" cols="30" rows="10" value={traitsSpeciesText} onChange={(e) => setTraitsSpeciesText(e.target.value)} ></textarea>
+        <textarea name="traitsHomeland" cols="30" rows="10" value={traitsHomelandText} onChange={(e) => setTraitsHomelandText(e.target.value)} ></textarea>
+    </div>  
 }
+
+export default BottomBlock

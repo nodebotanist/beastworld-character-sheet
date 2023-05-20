@@ -1,96 +1,107 @@
 import {Component, ReactPropTypes} from "react"
 
-export default class SkillsBlock extends Component {
-    constructor(props: ReactPropTypes) {
-        super(props)
-        this.state = {
-            skills: props.skills 
-        } 
+const SkillsBlock = ({ skills }) => {
+
+    const handleProficiencyChange = (e) => {
+
     }
 
-    render() {   
-        return <div className="skills"> 
-            <form id="skill-profs" onSubmit={(e) => e.preventDefault()}>
-                <div className="str-skill-profs">
-                    <input type="checkbox" name="strSavingThrow-prof" id="strSavingThrow-prof" checked={this.state.skills["strSavingThrowProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="athletics-prof" id="athletics-prof"  checked={this.state.skills["athleticsProf"]} onChange={this.handleProficiencyChange}/>
-                </div> 
-                <div className="dex-skill-profs">
-                    <input type="checkbox" name="dexSavingThrow-prof" id="dexSavingThrow-prof"  checked={this.state.skills["dexSavingThrowProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="acrobatics-prof" id="acrobatics-prof"  checked={this.state.skills["acrobaticsProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="sleightOfHand-prof" id="sleightOfHand-prof"  checked={this.state.skills["sleightOfHandProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="stealth-prof" id="stealth-prof"  checked={this.state.skills["stealthProf"]} onChange={this.handleProficiencyChange}/>
-                </div>
-                <div className="con-skill-profs">
-                    <input type="checkbox" name="conSavingThrow-prof" id="conSavingThrow-prof"  checked={this.state.skills["conSavingThrowProf"]} onChange={this.handleProficiencyChange}/>
-                </div>
-                <div className="int-skill-profs">
-                    <input type="checkbox" name="intSavingThrow-prof" id="intSavingThrow-prof"  checked={this.state.skills["intSavingThrowProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="arcana-prof" id="arcana-prof"  checked={this.state.skills["arcanaProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="history-prof" id="history-prof"  checked={this.state.skills["historyProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="investigation-prof" id="investigation-prof"  checked={this.state.skills["investigationProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="nature-prof" id="nature-prof"  checked={this.state.skills["natureProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="religion-prof" id="religion-prof"  checked={this.state.skills["religionProf"]} onChange={this.handleProficiencyChange}/>
-                </div>
-                <div className="wis-skill-profs">
-                    <input type="checkbox" name="wisSavingThrow-prof" id="wisSavingThrow-prof"  checked={this.state.skills["wisSavingThrowProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="animalHandling-prof" id="animalHandling-prof"  checked={this.state.skills["animalHandlingProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="insight-prof" id="insight-prof"  checked={this.state.skills["insightProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="medicine-prof" id="medicine-prof"  checked={this.state.skills["medicineProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="perception-prof" id="perception-prof"  checked={this.state.skills["perceptionProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="survival-prof" id="survival-prof"  checked={this.state.skills["survivalProf"]} onChange={this.handleProficiencyChange}/>
-                </div>  
-                <div className="cha-skill-profs">
-                    <input type="checkbox" name="chaSavingThrow-prof" id="chaSavingThrow-prof"  checked={this.state.skills["chaSavingThrowProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="deception-prof" id="deception-prof"  checked={this.state.skills["deceptionProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="intimidation-prof" id="intimidation-prof"  checked={this.state.skills["intimidationProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="performance-prof" id="performance-prof"  checked={this.state.skills["performanceProf"]} onChange={this.handleProficiencyChange}/>
-                    <input type="checkbox" name="persuasion-prof" id="persuasion-prof"  checked={this.state.skills["persuasionProf"]} onChange={this.handleProficiencyChange}/>
-                </div>
-            </form>
-            <div id="skill-values">
-                <div className="str-skills">
-                    <span id="strSavingThrow">{this.state.skills["strSavingThrow"]}</span>
-                    <span id="athletics">{this.state.skills["athletics"]}</span>
-                </div>
-                <div className="dex-skills">
-                    <span id="dexSavingThrow">{this.state.skills["dexSavingThrow"]}</span>
-                    <span id="acrobatics">{this.state.skills["acrobatics"]}</span>
-                    <span id="sleightOfHand">{this.state.skills["sleightOfHand"]}</span>
-                    <span id="stealth">{this.state.skills["stealth"]}</span>
-                </div>
-                <div className="con-skills">
-                    <span id="conSavingThrow">{this.state.skills["conSavingThrow"]}</span>
-                </div>
-                <div className="int-skills">
-                    <span id="intSavingThrow">{this.state.skills["intSavingThrow"]}</span>
-                    <span id="arcana">{this.state.skills["arcana"]}</span>
-                    <span id="history">{this.state.skills["history"]}</span>
-                    <span id="investigation">{this.state.skills["investigation"]}</span>
-                    <span id="nature">{this.state.skills["nature"]}</span>
-                    <span id="religion">{this.state.skills["religion"]}</span>
-                </div>
-                <div className="wis-skills">
-                    <span id="wisSavingThrow">{this.state.skills["wisSavingThrow"]}</span>
-                    <span id="animalHandling">{this.state.skills["animalHandling"]}</span>
-                    <span id="insight">{this.state.skills["insight"]}</span>
-                    <span id="medicine">{this.state.skills["medicine"]}</span>
-                    <span id="perception">{this.state.skills["perception"]}</span>
-                    <span id="survival">{this.state.skills["survival"]}</span>
-                </div>
-                <div className="cha-skills">
-                    <span id="chaSavingThrow">{this.state.skills["chaSavingThrow"]}</span>
-                    <span id="deception">{this.state.skills["deception"]}</span>
-                    <span id="intimidation">{this.state.skills["intimidation"]}</span>
-                    <span id="performance">{this.state.skills["performance"]}</span>
-                    <span id="persuasion">{this.state.skills["persuasion"]}</span>
-                </div>
+    return <div className="skills"> 
+        <form id="skill-profs" onSubmit={(e) => e.preventDefault()}>
+            <div className="str-skill-profs">
+                <input type="checkbox" name="strSavingThrow-prof" id="strSavingThrow-prof" checked={skills["strSavingThrowProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="athletics-prof" id="athletics-prof"  checked={skills["athleticsProf"]} onChange={handleProficiencyChange}/>
+            </div> 
+            <div className="dex-skill-profs">
+                <input type="checkbox" name="dexSavingThrow-prof" id="dexSavingThrow-prof"  checked={skills["dexSavingThrowProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="acrobatics-prof" id="acrobatics-prof"  checked={skills["acrobaticsProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="sleightOfHand-prof" id="sleightOfHand-prof"  checked={skills["sleightOfHandProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="stealth-prof" id="stealth-prof"  checked={skills["stealthProf"]} onChange={handleProficiencyChange}/>
+            </div>
+            <div className="con-skill-profs">
+                <input type="checkbox" name="conSavingThrow-prof" id="conSavingThrow-prof"  checked={skills["conSavingThrowProf"]} onChange={handleProficiencyChange}/>
+            </div>
+            <div className="int-skill-profs">
+                <input type="checkbox" name="intSavingThrow-prof" id="intSavingThrow-prof"  checked={skills["intSavingThrowProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="arcana-prof" id="arcana-prof"  checked={skills["arcanaProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="history-prof" id="history-prof"  checked={skills["historyProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="investigation-prof" id="investigation-prof"  checked={skills["investigationProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="nature-prof" id="nature-prof"  checked={skills["natureProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="religion-prof" id="religion-prof"  checked={skills["religionProf"]} onChange={handleProficiencyChange}/>
+            </div>
+            <div className="wis-skill-profs">
+                <input type="checkbox" name="wisSavingThrow-prof" id="wisSavingThrow-prof"  checked={skills["wisSavingThrowProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="animalHandling-prof" id="animalHandling-prof"  checked={skills["animalHandlingProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="insight-prof" id="insight-prof"  checked={skills["insightProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="medicine-prof" id="medicine-prof"  checked={skills["medicineProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="perception-prof" id="perception-prof"  checked={skills["perceptionProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="survival-prof" id="survival-prof"  checked={skills["survivalProf"]} onChange={handleProficiencyChange}/>
+            </div>  
+            <div className="cha-skill-profs">
+                <input type="checkbox" name="chaSavingThrow-prof" id="chaSavingThrow-prof"  checked={skills["chaSavingThrowProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="deception-prof" id="deception-prof"  checked={skills["deceptionProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="intimidation-prof" id="intimidation-prof"  checked={skills["intimidationProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="performance-prof" id="performance-prof"  checked={skills["performanceProf"]} onChange={handleProficiencyChange}/>
+                <input type="checkbox" name="persuasion-prof" id="persuasion-prof"  checked={skills["persuasionProf"]} onChange={handleProficiencyChange}/>
+            </div>
+        </form>
+        <div id="skill-values">
+            <div className="str-skills">
+                <input id="strSavingThrow" value={skills["strSavingThrow"]} />
+                <input id="athletics" value={skills["athletics"]} />
+            </div>
+            <div className="dex-skills">
+                <input id="dexSavingThrow" value={skills["dexSavingThrow"]} />
+                <input id="acrobatics" value={skills["acrobatics"]} />
+                <input id="sleightOfHand" value={skills["sleightOfHand"]} />
+                <input id="stealth" value={skills["stealth"]} />
+            </div>
+            <div className="con-skills">
+                <input id="conSavingThrow" value={skills["conSavingThrow"]} />
+            </div>
+            <div className="int-skills">
+                <input id="intSavingThrow" value={skills["intSavingThrow"]} />
+                <input id="arcana" value={skills["arcana"]} />
+                <input id="history" value={skills["history"]} />
+                <input id="investigation" value={skills["investigation"]} />
+                <input id="nature" value={skills["nature"]} />
+                <input id="religion" value={skills["religion"]} />
+            </div>
+            <div className="wis-skills">
+                <input id="wisSavingThrow" value={skills["wisSavingThrow"]} />
+                <input id="animalHandling" value={skills["animalHandling"]} />
+                <input id="insight" value={skills["insight"]} />
+                <input id="medicine" value={skills["medicine"]} />
+                <input id="perception" value={skills["perception"]} />
+                <input id="survival" value={skills["survival"]} />
+            </div>
+            <div className="cha-skills">
+                <input id="chaSavingThrow" value={skills["chaSavingThrow"]} />
+                <input id="deception" value={skills["deception"]} />
+                <input id="intimidation" value={skills["intimidation"]} />
+                <input id="performance" value={skills["performance"]} />
+                <input id="persuasion" value={skills["persuasion"]} />
             </div>
         </div>
-    }
-
-    handleProficiencyChange = (event) => {
-        console.log(event)
-        
-    }
+    </div>
 }
+
+export default SkillsBlock
+
+// export default class SkillsBlock extends Component {
+//     constructor(props: ReactPropTypes) {
+//         super(props)
+//         state = {
+//             skills: props.skills 
+//         } 
+//     }
+
+//     render() {   
+//         return 
+//     }
+
+//     handleProficiencyChange = (event) => {
+//         console.log(event)
+        
+//     }
+// }

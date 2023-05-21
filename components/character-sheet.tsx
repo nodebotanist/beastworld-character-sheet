@@ -44,14 +44,23 @@ export default class CharacterSheet extends Component {
             AC: props.AC,
             init: props.init,
             walkingSpeed: props.walkingSpeed,
-            hitDice: props.hitDice
+            hitDice: props.hitDice,
+            species: props.species,
+            alignment: props.alignment,
+            homeland: props.homeland,
+            background: props.background
         }
     }
 
     render() {
         return <div className="character-sheet-background">
             <Image class="bg" src={bg} alt="Beastworld Character Sheet page 1" />
-            <CharacterInfoBlock />
+            <CharacterInfoBlock 
+                species={this.state.species}
+                alignment={this.state.alignment}
+                homeland={this.state.homeland}
+                background={this.state.background}    
+            />
             <StatsProfsLevelsBlock 
                 str={this.state.str}
                 dex={this.state.dex}

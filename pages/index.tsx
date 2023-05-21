@@ -83,6 +83,10 @@ export default function Home() {
           init={0}
           walkingSpeed={"0ft"}
           hitDice={"d6"}
+          species=""
+          alignment=""
+          homeland=""
+          background=""
         />
     </main>
   )

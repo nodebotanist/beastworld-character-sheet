@@ -52,6 +52,7 @@ export default class CharacterSheet extends Component {
             background: props.background,
             crewName: props.crewName,
             playerName: props.playerName,
+            portrait: props.portrait
         }
     }
 
@@ -93,7 +94,9 @@ export default class CharacterSheet extends Component {
                 walkingSpeed={this.state.walkingSpeed}
                 hitDice={this.state.hitDice}
             />
-            <CharacterPortraitBlock />
+            <CharacterPortraitBlock 
+                portrait={this.state.portrait}
+            />
             <AttacksSpellcastingBlock 
                 attacksAndSpells={this.state.attacksAndSpells}
             />

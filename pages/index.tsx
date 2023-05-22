@@ -89,6 +89,7 @@ export default function Home() {
           background=""
           playerName=""
           crewName=""
+          portrait=""
         />
     </main>
   )

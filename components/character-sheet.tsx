@@ -10,6 +10,7 @@ import BottomBlock from './bottom-block'
 import StatsProfsLevelsBlock from './stats-profs-levels-block'
 
 import bg from '../public/images/char-sheet.jpg'
+import NameCrewBlock from './name-crew-block'
 
 export default class CharacterSheet extends Component {
     constructor (props) {
@@ -48,13 +49,19 @@ export default class CharacterSheet extends Component {
             species: props.species,
             alignment: props.alignment,
             homeland: props.homeland,
-            background: props.background
+            background: props.background,
+            crewName: props.crewName,
+            playerName: props.playerName,
         }
     }
 
     render() {
         return <div className="character-sheet-background">
             <Image class="bg" src={bg} alt="Beastworld Character Sheet page 1" />
+            <NameCrewBlock
+                name={this.state.playerName}
+                crew={this.state.crewName}
+            />
             <CharacterInfoBlock 
                 species={this.state.species}
                 alignment={this.state.alignment}

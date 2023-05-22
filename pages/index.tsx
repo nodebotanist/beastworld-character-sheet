@@ -87,6 +87,8 @@ export default function Home() {
           alignment=""
           homeland=""
           background=""
+          playerName=""
+          crewName=""
         />
     </main>
   )

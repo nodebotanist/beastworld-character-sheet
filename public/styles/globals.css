@@ -449,3 +449,15 @@ img {
 #character-portrait-block:hover #portrait-picker {
     display: block;
 }
+
+/* Begin name-crew-block */
+
+#name-crew-block {
+    position: absolute;
+    margin-left: 972px;
+}
+
+#name-crew-block input {
+    display: block;
+    margin-top: 7px;
+}

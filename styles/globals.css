@@ -470,3 +470,29 @@ img {
     margin-left: 83px;
     width: 274px;
 }
+
+/* begin pictogram block */ 
+
+#character-pictogram-block {
+    position: absolute;
+    margin-left: 994px;
+    margin-top: 203px;
+    height: 160px;
+    width: 160px;
+}
+
+#character-pictogram-block img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#character-pictogram-block #pictogram-picker {
+    position: absolute;
+    display: none;
+    margin-bottom: 0px;
+}
+
+#character-pictogram-block:hover #pictogram-picker {
+    display: block;
+}

@@ -61,7 +61,7 @@ export default function Home() {
             "persuasion": 0,
           }} 
           profBonus={0} 
-          levels={[]} 
+          levels={[{class: '', level: 0},{class: '', level: 0}]} 
           name={""} 
           inspiration={false} 
           passivePerception={10}

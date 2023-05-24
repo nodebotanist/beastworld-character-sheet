@@ -4,6 +4,7 @@ import Image from 'next/image'
 import HealthBlock from './health-block'
 import ACEtcBlock from './ac-etc-block'
 import CharacterPortraitBlock from './character-portrait-block'
+import CharacterPictogramBlock from './character-pictogram-block'
 import AttacksSpellcastingBlock from './attacks-spellcasting-block'
 import MoneyBlock from './money-block'
 import CharacterInfoBlock from './character-info-block'
@@ -46,6 +47,9 @@ const CharacterSheet = (props) => {
             currentHP={sheetState.currentHP}
             maxHP={sheetState.maxHP}
             tempHP={sheetState.tempHP}    
+        />
+        <CharacterPictogramBlock
+            pictogram={sheetState.pictogram}
         />
         <ACEtcBlock
             AC={sheetState.AC}

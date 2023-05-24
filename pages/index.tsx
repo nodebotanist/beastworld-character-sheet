@@ -90,6 +90,7 @@ export default function Home() {
           playerName=""
           crewName=""
           portrait=""
+          pictogram=""
         />
     </main>
   )

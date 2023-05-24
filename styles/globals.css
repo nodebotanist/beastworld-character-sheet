@@ -461,3 +461,12 @@ img {
     display: block;
     margin-top: 7px;
 }
+
+/* begin levels block */   
+
+#levels-block {
+    position: absolute;
+    margin-top: 195px;
+    margin-left: 83px;
+    width: 274px;
+}

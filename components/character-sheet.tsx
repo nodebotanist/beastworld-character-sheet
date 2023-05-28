@@ -10,7 +10,8 @@ import MoneyBlock from './money-block'
 import CharacterInfoBlock from './character-info-block'
 import BottomBlock from './bottom-block'
 import StatsProfsLevelsBlock from './stats-profs-levels-block'
-import NameCrewBlock from './name-crew-block'
+import NameCrewBlock from './name-crew-block'   
+import CharacterNameBlock from './character-name-block'
 
 import bg from '../public/images/char-sheet.jpg'
 
@@ -22,6 +23,9 @@ const CharacterSheet = (props) => {
         <NameCrewBlock
             name={sheetState.playerName}
             crew={sheetState.crewName}
+        />
+        <CharacterNameBlock
+            name={sheetState.charName}
         />
         <CharacterInfoBlock 
             species={sheetState.species}

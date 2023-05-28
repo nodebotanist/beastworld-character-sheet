@@ -60,6 +60,7 @@ export default function Home() {
             "persuasionProf": false,
             "persuasion": 0,
           }} 
+          charName={""}
           profBonus={0} 
           levels={[{class: '', level: 0},{class: '', level: 0}]} 
           name={""} 

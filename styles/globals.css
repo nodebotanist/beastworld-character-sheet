@@ -496,3 +496,18 @@ img {
 #character-pictogram-block:hover #pictogram-picker {
     display: block;
 }
+
+/* begin character name block */
+
+#character-name-block {
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 83px;
+    width: 274px;
+}   
+
+#character-name-block input {
+    display: block;
+    width: 100%;    
+    height: 100%;
+}

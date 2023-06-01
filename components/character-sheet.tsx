@@ -12,6 +12,7 @@ import BottomBlock from './bottom-block'
 import StatsProfsLevelsBlock from './stats-profs-levels-block'
 import NameCrewBlock from './name-crew-block'   
 import CharacterNameBlock from './character-name-block'
+import ProfBonusInspirationBlock from './prof-bonus-inspiration-block'
 
 import bg from '../public/images/char-sheet.jpg'
 
@@ -26,6 +27,10 @@ const CharacterSheet = (props) => {
         />
         <CharacterNameBlock
             name={sheetState.charName}
+        />  
+        <ProfBonusInspirationBlock
+            profBonus={sheetState.profBonus}
+            inspiration={sheetState.inspiration}
         />
         <CharacterInfoBlock 
             species={sheetState.species}

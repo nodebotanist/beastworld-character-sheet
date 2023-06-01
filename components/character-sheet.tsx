@@ -19,7 +19,7 @@ const CharacterSheet = (props) => {
     const [sheetState, setSheetState] = useState(props)
 
     return <div className="character-sheet-background">
-        <Image class="bg" src={bg} alt="Beastworld Character Sheet page 1" />
+        <Image className="bg" src={bg} alt="Beastworld Character Sheet page 1" />
         <NameCrewBlock
             name={sheetState.playerName}
             crew={sheetState.crewName}

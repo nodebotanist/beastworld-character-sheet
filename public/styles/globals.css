@@ -531,4 +531,13 @@ img {
 
 #prof-bonus-inspiration-block .inspiration {
     margin-top: 28px;
+}       
+
+/* begin passive perception block */    
+
+#passive-perception-block {
+    position: absolute;
+    margin-top: 1060px;
+    margin-left: 291px;
+    width: 61px;
 }

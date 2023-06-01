@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import StatsBlock from './stats-block'
 import SkillsBlock from './skills-block'
 import LevelsBlock from './levels-block'
+import PassivePerceptionBlock from './passive-perception-block'
 
 const StatsProfsLevelsBlock = ({ str, dex, con, int, wis, cha, skills, levels, name, profBonus, inspiration, passivePerception}) => {
 
@@ -23,6 +24,7 @@ const StatsProfsLevelsBlock = ({ str, dex, con, int, wis, cha, skills, levels, n
         <LevelsBlock levels={charLevels} />
         <StatsBlock str={strength} dex={dexterity} con={constitution} int={intelligence} wis={wisdom} cha={charisma} />
         <SkillsBlock skillsInitialState={charSkills} />
+        <PassivePerceptionBlock passivePerception={passPerception} />
     </div>
 }
 

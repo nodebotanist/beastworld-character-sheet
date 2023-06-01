@@ -21,6 +21,14 @@ const CharacterSheet = (props) => {
 
     return <div className="character-sheet-background">
         <Image className="bg" src={bg} alt="Beastworld Character Sheet page 1" />
+        <BottomBlock 
+            profAndLangs= {sheetState.profAndLangs}
+            equipment= {sheetState.equipment}
+            classFeatures= {sheetState.classFeatures}
+            traitsBackground= {sheetState.traitsBackground}
+            traitsSpecies= {sheetState.traitsSpecies}
+            traitsHomeland= {sheetState.traitsHomeland}
+        />
         <NameCrewBlock
             name={sheetState.playerName}
             crew={sheetState.crewName}
@@ -77,14 +85,6 @@ const CharacterSheet = (props) => {
             silver={sheetState.silver}
             gold={sheetState.gold}
             platinum={sheetState.platinum}
-        />
-        <BottomBlock 
-            profAndLangs= {sheetState.profAndLangs}
-            equipment= {sheetState.equipment}
-            classFeatures= {sheetState.classFeatures}
-            traitsBackground= {sheetState.traitsBackground}
-            traitsSpecies= {sheetState.traitsSpecies}
-            traitsHomeland= {sheetState.traitsHomeland}
         />
     </div>
 }
